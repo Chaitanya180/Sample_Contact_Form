@@ -1,0 +1,89 @@
+<style>
+  /* Style the form */
+  form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  /* Style the input fields */
+  input[type="text"],
+  input[type="email"],
+  input[type="date"],
+  input[type="tel"],
+  select,
+  textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+
+  /* Style the submit button */
+  input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  /* Style the container for the input fields */
+  .container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  /* Style the labels */
+  label {
+    font-size: 14px;
+  }
+</style>
+
+<form action="/action_page.php">
+  <div class="container">
+    <h1>Contact Form</h1>
+    <p>Please fill in this form to contact us.</p>
+    <hr>
+
+    <label for="name"><b>Name</b></label>
+    <input type="text" placeholder="Enter your name" name="name" required>
+
+    <label for="email"><b>Email</b></label>
+    <input type="email" placeholder="Enter your email" name="email" required>
+
+    <label for="dob"><b>Date of Birth</b></label>
+    <input type="date" name="dob" required>
+
+    <label for="phone"><b>Phone</b></label>
+    <input type="tel" placeholder="Enter your phone number" name="phone" required>
+
+    <label for="country"><b>Country</b></label>
+    <select name="country" required>
+      <option value="">Select a country</option>
+      <option value="AF">Afghanistan</option>
+      <option value="AX">Åland Islands</option>
+      <!-- More options go here -->
+    </select>
+
+    <label for="subject"><b>Subject</b></label>
+    <textarea name="subject" placeholder="Write something.." style="height:200px" required></textarea>
+
+    <div style="display: flex; justify-content: space-between;">
+      <input type="submit" value="Submit">
+      <input type="reset" value="Reset">
+    </div>
+  </div>
+</form>
